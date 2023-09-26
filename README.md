@@ -3,7 +3,7 @@
 
 ## Overview
 
-HealthBot is a Python-based chatbot that provides health-related information to users. It utilizes the Twilio API for messaging and OpenAI's GPT-3.5 model for natural language understanding.
+HealthBot is a Python-based chatbot that provides health-related information to users. It utilizes the Twilio API for messaging and [Langchain](https://github.com/hwchase17/langchain), OpenAI's GPT-3.5 data retrieval.
 
 ## Features
 
@@ -12,7 +12,6 @@ HealthBot is a Python-based chatbot that provides health-related information to 
 - **Persistent Sessions:** Store chat history for each user session.
 - **Data Scraping:** Retrieve disease information from Mayo Clinic's website.
  - Web scraper that scrapes the diseases and conditions of [Mayo Clinic]http://www.mayoclinic.org).
-
 
 
 
