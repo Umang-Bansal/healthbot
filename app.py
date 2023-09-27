@@ -98,8 +98,8 @@ def whatsapp_webhook():
         
         client.messages.create(
             body=chatbot_response,
-            from_='whatsapp:+14155238886',  # Use your Twilio WhatsApp number
-            to='whatsapp:+917073146185'  # The user's WhatsApp number
+            from_='whatsapp:+141******86',  # Use your Twilio WhatsApp number
+            to='whatsapp:+917********5'  # The user's WhatsApp number
         )
         
         return '', 204  # Return a success response to Twilio
