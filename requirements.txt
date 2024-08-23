@@ -1,0 +1,8 @@
+python-fasthtml
+lxml
+requests
+langchain
+langchain-community
+langchain-google-genai
+beautifulsoup4
+faiss-cpu

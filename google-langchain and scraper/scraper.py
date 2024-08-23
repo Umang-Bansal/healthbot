@@ -1,4 +1,3 @@
-
 from bs4 import BeautifulSoup
 import requests 
 disease = 'disease_name'
@@ -32,5 +31,4 @@ if disease_url:
     with open('data/' + disease + '.txt', 'a') as f:
         for element in information:       
             f.write(element.text + '\n')
-
 

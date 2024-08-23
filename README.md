@@ -1,41 +1,64 @@
-# HealthBot - Your Health Information Chatbot
+# Disease Q&A Healthbot
 
+This repository contains a web-based Q&A chatbot that provides information on various diseases. The chatbot uses Google's Gemini language model for natural language understanding and FAISS for vector-based document retrieval. The chatbot scrapes disease-related data and allows users to ask questions, which are answered based on the context of the scraped data.
 
-## Overview
-
-HealthBot is a Python-based chatbot that provides health-related information to users. It utilizes the Twilio API for messaging and [Langchain](https://github.com/hwchase17/langchain), OpenAI's GPT-3.5 data retrieval.
+![alt text](<Screenshot 2024-08-23 200058.png>)
 
 ## Features
 
-- **Disease Information:** Users can ask for information about various diseases.
-- **Interactive Chat:** Engage in interactive conversations with the chatbot.
-- **Persistent Sessions:** Store chat history for each user session.
-- **Data Scraping:** Retrieve disease information from Mayo Clinic's website.
- - Web scraper that scrapes the diseases and conditions of [Mayo Clinic]http://www.mayoclinic.org).
+- **Disease Information Scraper:** Scrapes information about a disease from online sources.[Mayo Clinic]http://www.mayoclinic.org
+- **Q&A Chatbot:** Answers user questions based on the scraped information using a conversational interface.
+- **Natural Language Processing:** Utilizes Google's Gemini language model (`gemini-1.5-flash`) for generating responses.
+- **Vector-Based Search:** Uses FAISS for efficient document retrieval.
+- **User-Friendly Interface:** Built with FastHTML, TailwindCSS, and DaisyUI for a responsive and interactive user experience.
+
+## Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/yourusername/disease-qa-chatbot.git
+   cd disease-qa-chatbot
+
+2. **Create a virtual environment and activate it:**
+
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+
+3. **Install the required dependencies:**
+   ```bash
+    pip install -r requirements.txt
+
+4. **Set up environment variables:**
+    make a file - constants.py and save
+   ```bash
+    GOOGLE_API_KEY=your-google-api-key
+
+5. **Run the application:**
+   ```bash
+    python app.py
+
+6. **Access the application:**
+    Open your browser and navigate to http://127.0.0.1:8000.
 
 
+## Usage
 
+1. Scrape Disease Information:
 
-## Setup and Usage
+Enter the name of a disease in the input field and click "Scrape Disease."
+The application will fetch information related to the disease and prepare it for Q&A.
 
-### Installation
-- Install dependencies:
-    ```pip install -r requirements.txt```
+2. Ask Questions:
 
-- Set up environment variables for Twilio and OpenAI API keys.
+After scraping, you can ask any questions related to the disease.
+The chatbot will provide answers based on the context of the scraped data.    
 
-- Start the Flask application:
-    ```python app.py```
+## License
+  This project is licensed under the MIT License. See the LICENSE file for more details.
 
-- Use Ngrok for local development (if necessary):
-    ```ngrok http 5000```
-
-
-### Usage
-- Send a WhatsApp message to your Twilio phone number to initiate a chat session.
-
-- You can ask for disease information, get help, and end the chat using commands like "help," "quit," or "exit."
-
-- The chatbot will respond with relevant health information.
-
-
+## Acknowledgements
+1. LangChain for providing the core components of the chatbot.
+2. Google for the Gemini language model.
+3. FAISS for the vector store.
