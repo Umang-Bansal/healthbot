@@ -17,7 +17,7 @@ This repository contains a web-based Q&A chatbot that provides information on va
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/Umang- Bansal/healthbot.git
+   git clone https://github.com/Umang-Bansal/healthbot.git
    cd healthbot
 
 2. **Create a virtual environment and activate it:**
