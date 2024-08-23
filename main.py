@@ -15,7 +15,7 @@ dlink = Link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1
 app = FastHTML(hdrs=(tlink, dlink))
 
 # Set your Google API key
-os.environ["GOOGLE_API_KEY"] = constants.API_KEY
+api_key = os.environ.get("GOOGLE_API_KEY")
 
 # Initialize global variables
 current_disease = None
