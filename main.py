@@ -7,7 +7,6 @@ from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.prompts import PromptTemplate
 from scraper import scrape_disease
-import constants
 # Set up the app
 tlink = Script(src="https://cdn.tailwindcss.com")
 dlink = Link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css")
